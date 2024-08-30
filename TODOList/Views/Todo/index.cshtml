@@ -1,16 +1,25 @@
-@{
-    Layout = null;
-}
+@model List<TODOList.Models.Todo>
 
-<!DOCTYPE html>
+<h1>Lista de Tarefas</h1>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    <h1>Lista de Tarefas</h1>
+<div style="display: flex; flex-direction: row; width: 100vw; flex-wrap: wrap; gap: 5px">
+    
+    @foreach (var todo in Model) // Itera sobre o modelo que foi passado para a view
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.patasdacasa.com.br/sites/default/files/noticias/2022/09/as-10-racas-de-gato-mais-fofas-e-amadas-do-mundo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@todo.Tarefa</h5> <!-- Corrigi para usar a variável correta -->
+                <p class="card-text">@todo.Descricao</p> <!-- Corrigi para usar a variável correta -->
+                @if (todo.Feito) // Assumindo que existe uma propriedade "Feito" em "Todo"
+                {
+                    <p class="card-text">Tarefa feita</p>
+                }
+                else
+                {
+                    <p class="card-text">Tarefa não feita</p>
+                }
+            </div>
+        </div>
+    }
 </div>
-</body>
-</html>

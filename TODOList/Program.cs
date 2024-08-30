@@ -1,3 +1,7 @@
+global using TODOList.Models;
+using Microsoft.EntityFrameworkCore;
+using TODOList.Data;
+
 namespace TODOList;
 
 public class Program
@@ -5,6 +9,7 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        builder.Services.AddDbContext<dbContext>(options => options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
