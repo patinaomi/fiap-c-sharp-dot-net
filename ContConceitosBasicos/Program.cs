@@ -93,8 +93,10 @@ class Program
         idades.Add(28);
         
         nomesAlunos.Add("Pri");
+        
+        nomesAlunos.Insert(0, "Patricia"); // Aqui coloca na primeira posição
 
-        foreach (int idade in idades)
+        foreach (var idade in idades)
         {
            Console.WriteLine(idade); 
         }
@@ -103,5 +105,6 @@ class Program
         {
             Console.WriteLine(nomesAlunos[i]);
         }
+        
     }
 }

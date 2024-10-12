@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Cliente.API", "Cadastro.Cliente.API.csproj", "{7525148A-E99E-48D4-949A-41D1FB566631}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7525148A-E99E-48D4-949A-41D1FB566631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7525148A-E99E-48D4-949A-41D1FB566631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7525148A-E99E-48D4-949A-41D1FB566631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7525148A-E99E-48D4-949A-41D1FB566631}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
