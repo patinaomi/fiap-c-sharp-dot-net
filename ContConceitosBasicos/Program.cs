@@ -1,4 +1,4 @@
-﻿namespace ConceitosIniciais;
+﻿namespace ContConceitosBasicos;
 
 // Com instruções de nível superior, você não precisa declarar
 // a classe Program nem o método Main explicitamente.
@@ -106,5 +106,40 @@ class Program
             Console.WriteLine(nomesAlunos[i]);
         }
         
+        // ----------
+        // Dicionário
+        Dictionary<string, int> idadePessoas = new Dictionary<string, int>();
+        
+        idadePessoas.Add("Patricia", 30);
+        idadePessoas.Add("Claudio", 31);
+        idadePessoas.Add("Igor", 19);
+
+        Console.WriteLine($"A pessoa tem {idadePessoas["Patricia"]} anos.");
+
+        HashSet<int> hashSetNumeros = new HashSet<int>() { 0, 1, 2 };
+        hashSetNumeros.Add(1);
+        hashSetNumeros.Add(2);
+        hashSetNumeros.Add(3);
+        hashSetNumeros.Add(4);
+        hashSetNumeros.Add(4);
+
+        foreach (int i in hashSetNumeros)
+        {
+            Console.WriteLine(i);
+        }
+
+        // ----------------------
+        // Conversão de Dados
+        //Cast
+        int valor = (int)2.5;
+        
+        //Parse
+        int valorParse = int.Parse("0");
+        
+        //TryParse
+        string numString = "45";
+        int valorTryParse = int.TryParse(numString, out valor) ? valor : 0;
+        
+        Console.WriteLine(valorTryParse);
     }
 }
